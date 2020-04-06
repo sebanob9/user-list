@@ -1,0 +1,68 @@
+@import "../../../styles/variables";
+
+.enable-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 10px;
+  border-bottom: 1px dashed $main-color;
+  &__name, &__date {
+    input {
+    width:85%;
+    margin:5px 0;
+    }
+  }
+}
+
+.edit-form__date-icon {
+  margin-left: 10px;
+}
+
+.disabled {
+  input {
+  color: $gray400;
+  }
+}
+
+
+//-----------------------//
+//------ DESKTOP -------//
+//---------------------//
+@media screen and (min-width: 767px) {
+  .enable-menu {
+    .btn {
+      max-width: 200px;
+    }
+  }
+
+  .edit-form {
+    flex-direction: row;
+    &__name {
+      input {
+      width: inherit;
+      }
+    }
+    &__name, &__date {
+      margin:10px 5px;
+      input {
+        margin: 0;
+      }
+    }
+  }
+
+  .edit-form__date-icon {
+    margin-left: 0;
+  }
+
+  .btn--update, .btn--delete {
+    max-width: 100px;
+    margin:10px 5px;
+  }
+
+}

@@ -1,0 +1,46 @@
+@import "../../../styles/variables";
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $contrast-color;
+    font-size: $font-s;
+
+    &__link {
+        align-items: center;
+        padding: 15px 10px;
+        color: $white;
+    }
+
+    .active {
+        background-color: $main-dark;
+        border-radius: $border-radius;
+        text-align: center;
+    }
+}
+
+//-----------------------//
+//------ DESKTOP -------//
+//---------------------//
+
+@media screen and (min-width: 767px) {
+    .nav-menu {
+        justify-content: space-between;
+        background-color: inherit;
+        border-bottom: 2px solid $main-dark;
+        font-size: $font-m;
+
+        &__link {
+            width: 250px;
+            color: $gray;
+            text-align: center;
+        }
+        
+        .active {
+            color: $white;
+            border-radius: inherit;
+        }
+    }
+
+}

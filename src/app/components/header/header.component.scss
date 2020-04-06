@@ -1,0 +1,89 @@
+@import "../../../styles/variables";
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.5s;
+    min-height: 80px;
+    background-color: $main-color;
+
+    &__logo {
+    height: 30px;
+    margin-top: 5px;
+    }
+
+    &__title {
+        color: $gray100;
+        font-size: $font-l;
+        margin: 15px;
+        
+        p {
+            border-right: 2px solid rgba(255,255,255,.75);
+            overflow: hidden;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+    }
+
+    &__icons {
+        display: none;
+    }
+}
+
+    // --- TITLE ANIMATION --- //
+    .typing-animation {
+        animation: typewriter 3s steps(20) 1s 1 normal both,
+                blinkTextCursor 500ms steps(20) infinite normal;
+    }
+
+    @keyframes typewriter{
+        from{width: 0;}
+        to{width: 280px;}
+    }
+    
+    @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+    }
+
+//-----------------------//
+//------ DESKTOP -------//
+//---------------------//
+
+@media screen and (min-width: 767px) {
+    .header {
+    flex-direction: row;
+    min-height: 120px;
+
+        &__logo {
+            height: 50px;
+        }
+
+        &__title {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+
+            p {
+                font-size: $font-xl;
+            }
+        }
+
+        &__icons {
+            display: inherit;
+            &-link {
+                height: 40px;
+                margin-left: 10px;
+            }
+        }
+    }
+   
+      @keyframes typewriter{
+        from{width: 0;}
+        to{width: 375px;}
+      }
+     
+}
+   

@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+.not-found {
+    text-align: center;
+
+    &__title {
+        margin: 15px;
+        font-size: $font-xl;
+        font-weight: 700;
+        span {
+        color: $main-dark;
+        }
+    }
+
+    &__img {
+    height: 150px;
+    margin: 15px;
+    }
+
+    &__info {
+    margin: 15px;
+    font-size: $font-l;
+    }
+}
+
+  @media screen and (min-width: 767px) {
+    .not-found {
+        &__title {
+        font-size: $font-xxl;
+        }
+
+        &__img {
+        height: 250px;
+        }
+
+        &__info {
+        font-size: $font-xl;
+        }
+}
+} 

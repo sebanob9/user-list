@@ -1,0 +1,42 @@
+@import "../../../styles/variables";
+
+.users-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+    padding: 5px 0 5px 0;
+    border-right: 1px dashed $main-color;
+    border-bottom: 1px dashed $main-color;
+    align-items: center;
+
+    &__name {
+        font-weight: bold;
+    }
+    &__birthdate {
+        font-size: $font-s;
+    }
+    &__generation {
+        font-size: $font-s;
+        font-style: italic;
+    }
+}
+
+
+//-----------------------//
+//------ DESKTOP -------//
+//---------------------//
+@media screen and (min-width: 767px) {
+    .user-card{
+        flex-basis: 25%;
+        &:hover {
+            cursor: pointer;
+            background-color: $main-color-op;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<form (ngSubmit)="addUser(userForm)" #userForm="ngForm" class="add-form">
+  
+    <div class="add-form__name">
+      <input type="text" id="user_name" required placeholder="User name" 
+      [(ngModel)]="user.name" name="name" #name="ngModel"  
+      minlength="3" required pattern="[a-zA-Z ]*">
+
+        <div *ngIf="name.errors?.required && name?.touched" class="error-text">
+          It's a mandatory field
+        </div>
+        <div *ngIf="name.errors?.minlength" class="error-text">
+          At least {{ name.errors.minlength.requiredLength}} characters
+        </div>
+        <div *ngIf="name.errors?.pattern" class="error-text">
+          Only letters allowed
+        </div>
+    </div>
+
+    <div class="add-form__date">
+      <input matInput [matDatepicker]="picker" id="user_birthdate" placeholder="Choose a date"
+      [(ngModel)]="user.birthdate" #birthdate="ngModel" name="birthdate" readonly  
+      required  [min]="minDate" [max]="maxDate">
+      <mat-datepicker-toggle matSuffix [for]="picker" class="add-form__date-icon"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
+  
+    <button type="submit" class="btn" [disabled]="userForm.form.invalid"> Add </button>
+</form>
