@@ -1,6 +1,6 @@
 <div class="enable-menu">
-  <button [disabled]="!isReadOnly" (click)="isDisabled()" class="btn">Enable edition</button>
-  <button [disabled]="isReadOnly" (click)="isDisabled()" class="btn">Disable edition</button>
+  <button [disabled]="!isReadOnly" (click)="isDisabled()" class="btn" i18n>Enable edition</button>
+  <button [disabled]="isReadOnly" (click)="isDisabled()" class="btn" i18n>Disable edition</button>
 </div>
 
 
@@ -8,20 +8,20 @@
  [ngClass]="status ? 'enabled' : 'disabled'" class="edit-form">
 
   <div class="edit-form__name">
-    <input type="text" id="user_name" required placeholder="Indique su nombre" 
+    <input type="text" id="user_name" required placeholder="your name here" 
     [(ngModel)]="user.name" name="name" #name="ngModel" 
-    [readonly]="isReadOnly" minlength="3">
+    [readonly]="isReadOnly" minlength="3" i18n>
 
-    <div *ngIf="name.errors?.required && name?.touched">
+    <div *ngIf="name.errors?.required && name?.touched" i18n>
       It is a mandatory field.
     </div>
-    <div *ngIf="name.errors?.minlength">
+    <div *ngIf="name.errors?.minlength" i18n>
       At least {{ name.errors.minlength.requiredLength}} characters
     </div>
   </div>
 
   <div class="edit-form__date">
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date"
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" i18n
       [(ngModel)]="user.birthdate" #birthdate="ngModel" name="birthdate" readonly id="user_birthdate" required
       [min]="minDate" [max]="maxDate" [readonly]="isReadOnly">
     <mat-datepicker-toggle matSuffix [for]="picker" class="edit-form__date-icon"></mat-datepicker-toggle>
@@ -30,7 +30,7 @@
 
   <input type="hidden" name="id" #id="ngModel" [(ngModel)]="user.id">
   
-  <button type="submit" [disabled]="isReadOnly" class="btn btn--update">Update</button>
-  <button (click)="deleteUser(user.id)" [disabled]="isReadOnly"  class="btn btn--delete">Delete</button>
+  <button type="submit" [disabled]="isReadOnly" class="btn btn--update" i18n>Update</button>
+  <button (click)="deleteUser(user.id)" [disabled]="isReadOnly"  class="btn btn--delete" i18n>Delete</button>
 
 </form>

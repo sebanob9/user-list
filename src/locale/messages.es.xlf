@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="50d1dfab09108c0199ae4532e1027422a301113c" datatype="html">
+        <source>Users birthday list</source>
+        <target>Listado de usuarios</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="58866bd2a411a7df43a1708322598f772a8f893e" datatype="html">
+        <source>User list</source>
+        <target>Listado usuarios</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f8c7e16da78e5daf06335e60dd27f03ec30530f4" datatype="html">
+        <source>Add user</source>
+        <target>Nuevo usuario</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6e198370b038967212733a9c080a2e7f2c9cd48c" datatype="html">
+        <source>Edit users</source>
+        <target>Editar usuarios</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d718ee3de035ebf939f91baf92aa1a4420a809db" datatype="html">
+        <source>Counter</source>
+        <target>Contador</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="94516fa213706c67ce5a5b5765681d7fb032033a" datatype="html">
+        <source>Loading...</source>
+        <target>Cargando...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-list/user-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="024886ca34a6f309e3e51c2ed849320592c3faaa" datatype="html">
+        <source>User name</source>
+        <target>Nombre usuario</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-create/user-create.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">From placeholder</note>
+      </trans-unit>
+      <trans-unit id="4cdc146cd29e98fb21b26e076c88e1bc01b04c71" datatype="html">
+        <source>
+          It&apos;s a mandatory field
+        </source>
+        <target>Campo obligatorio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-create/user-create.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="15c29654e11424284fb75cdc0e20ec497f2e9b93" datatype="html">
+        <source>
+          At least <x id="INTERPOLATION" equiv-text="{{ name.errors.minlength.requiredLength}}"/> characters
+        </source>
+        <target>
+          Al menos<x id="INTERPOLATION" equiv-text="{{ name.errors.minlength.requiredLength}}"/> caracteres
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-create/user-create.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ee3848ef84a50d8704d110faec6b794d9f12dde8" datatype="html">
+        <source>
+          Only letters allowed
+        </source>
+        <target> Solamente puede escribir letras </target>
+        
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-create/user-create.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3317b8688eb2cfabc4021cd7b2926b32f3864ad2" datatype="html">
+        <source>Choose a date</source>
+        <target>Selecciona una fecha</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-create/user-create.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">From placeholder</note>
+      </trans-unit>
+      <trans-unit id="b8e48406797b42a73d65fd77a2730e1ed068ead8" datatype="html">
+        <source> Add </source>
+        <target>Añadir</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-create/user-create.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eccc8655497b79d9fcdbbceb72d9366a2e2e4b6a" datatype="html">
+        <source>Enable edition</source>
+        <target>Habilitar edición</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-edit/user-edit.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="79612c3427ea9f20a3df893d97c9cecb3a123000" datatype="html">
+        <source>Disable edition</source>
+        <target>Deshabilitar edición</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-edit/user-edit.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="27c1a82504993f509b734e38310d5948a46a3267" datatype="html">
+        <source>
+      It is a mandatory field.
+    </source>
+    <target>Campo obligatorio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-edit/user-edit.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="751f12536e1bdef7f28956af483ab79b27bfafda" datatype="html">
+        <source>
+      At least <x id="INTERPOLATION" equiv-text="{{ name.errors.minlength.requiredLength}}"/> characters
+    </source>
+    <target>
+      Al menos <x id="INTERPOLATION" equiv-text="{{ name.errors.minlength.requiredLength}}"/> letras
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-edit/user-edit.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="047f50bc5b5d17b5bec0196355953e1a5c590ddb" datatype="html">
+        <source>Update</source>
+        <target>Guardar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-edit/user-edit.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <target>Eliminar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/user-edit/user-edit.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f7ff1065fe626174ac3e41f711c28e4d41ac9d06" datatype="html">
+        <source>Total users: <x id="INTERPOLATION" equiv-text="{{userService.users.length}}"/></source>
+        <target>Total usuarios: <x id="INTERPOLATION" equiv-text="{{userService.users.length}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/counter/counter.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="07436c4741605f0f7bcb78480fba3a17e606280e" datatype="html">
+        <source>Silent Generation <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(until 1948):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.generationSilent}}"/></source>
+        <target>Generación del silencio <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(hasta 1948):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.generationSilent}}"/></target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/counter/counter.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b73fd8989e5a3ffff37a7b63f3839c9ebe86afc7" datatype="html">
+        <source>Baby Boom <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> (1949-1968):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.babyBoom}}"/></source>
+        <target>Baby Boom <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> (1949-1968):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.babyBoom}}"/></target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/counter/counter.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4d5f25b6772c020d80d7244fbdea7b44c83601ce" datatype="html">
+        <source>Generation X <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> (1969-1980):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.generationX}}"/></source>
+        <target>Generación X <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> (1969-1980):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.generationX}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/counter/counter.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c733a6e60071293fd1f1e8cee503a0a54f85a497" datatype="html">
+        <source>Millenials<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> (1981-1994):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.generationZ}}"/></source>
+        <target>Millenials<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> (1981-1994):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.generationZ}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/counter/counter.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dd440b6cc7df821e51b203b2dea047740ba1cddd" datatype="html">
+        <source>Generation Z<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> (since 1995):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.millenial}}"/></source>
+        <target>Generación Z<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/> (desde 1995):<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="INTERPOLATION" equiv-text="{{userService.millenial}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/counter/counter.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c7b40866874819f0eba6fce845220154987bf4b" datatype="html">
+        <source>Error <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>404<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Ups! <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>404<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="71fd8dd14cab0013db825ff3cd71d928d9dabb1d" datatype="html">
+        <source>We can&apos;t find the page you requested</source>
+        <target>La página que buscas no existe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

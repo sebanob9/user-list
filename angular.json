@@ -34,6 +34,12 @@
             ]
           },
           "configurations": {
+            "es": {
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nLocale": "es",
+              "i18nFormat": "xlf",
+              "aot": true
+              },
             "production": {
               "fileReplacements": [
                 {
@@ -71,6 +77,9 @@
             "browserTarget": "user-list:build"
           },
           "configurations": {
+            "es": {
+              "browserTarget": "user-list:build:es"
+              },
             "production": {
               "browserTarget": "user-list:build:production"
             }
@@ -120,6 +129,9 @@
             "devServerTarget": "user-list:serve"
           },
           "configurations": {
+            "es": {
+              "devServerTarget": "test-i18n:serve:es"
+              },
             "production": {
               "devServerTarget": "user-list:serve:production"
             }
