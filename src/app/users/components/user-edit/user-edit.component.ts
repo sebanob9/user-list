@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/services/users.service';
+import { UsersService } from 'src/app/core/services/users.service';
 import { NgxSpinnerService } from "ngx-spinner";
-/* import { ThrowStmt } from '@angular/compiler'; */
-import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -28,21 +26,6 @@ export class UserEditComponent implements OnInit {
         this.spinner.hide();
       });
     }
-
-/*   editUser(form: NgForm) {
-    console.log(form.value);
-      this.userService.putUser(form.value)
-        .subscribe(res => {
-          this.showUsers();
-        })
-        Swal.fire({
-          allowOutsideClick: true,
-          text: 'The user has been uptated',
-          icon: 'success',
-          confirmButtonText: 'CONTINUE',
-          confirmButtonColor: '#9f6984'
-        })
-  } */
 
     
   deleteUser(id: string) {

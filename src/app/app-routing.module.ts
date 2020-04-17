@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
 
-import { UserListComponent } from './components/user-list/user-list.component';
-import { UserCreateComponent } from './components/user-create/user-create.component';
-import { UserEditComponent } from './components/user-edit/user-edit.component';
-import { CounterComponent } from './components/counter/counter.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { UserListComponent } from './users/components/user-list/user-list.component';
+import { UserCreateComponent } from './users/components/user-create/user-create.component';
+import { UserEditComponent } from './users/components/user-edit/user-edit.component';
+import { CounterComponent } from './users/components/counter/counter.component';
+import { NotFoundComponent } from './core/components/not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/user-list', pathMatch: 'full'},

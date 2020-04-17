@@ -1,60 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/services/users.service';
-import { NgxSpinnerService } from "ngx-spinner";
-
-import Swal from 'sweetalert2';
-import { User } from 'src/app/models/user';
-import { NgForm } from '@angular/forms';
-
+import { UsersService } from 'src/app/core/services/users.service';
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss']
+  selector: 'app-counter',
+  templateUrl: './counter.component.html',
+  styleUrls: ['./counter.component.scss']
 })
-export class UserListComponent implements OnInit {
+export class CounterComponent implements OnInit {
 
-  constructor(public usersService: UsersService, private spinner: NgxSpinnerService) {
-
-  }
+  constructor(public userService: UsersService) { }
 
   ngOnInit() {
     this.showUsers();
   }
 
-public modalClose = "";
-
- editUser1(user: User) {
-  this.usersService.selectedUser = user; // primero seleccionamos al invitado
-  console.log(user);
-}
-
-  editUser(form?: NgForm) {
-    console.log(form.value);
-      this.usersService.putUser(form.value)
-        .subscribe(res => {
-          this.showUsers();
-        })
-        Swal.fire({
-          allowOutsideClick: true,
-          text: 'The user has been uptated',
-          icon: 'success',
-          confirmButtonText: 'CONTINUE',
-          confirmButtonColor: '#9f6984'
-        })
-        this.modalClose = 'modal';
-  }
-
-  
-
   showUsers() {
-    this.spinner.show();
-    this.usersService.getUsers() 
+   
+    this.userService.getUsers() 
       .subscribe( res => {
-        this.usersService.users = res;
+        this.userService.users = res;
         console.log(res);
-        this.spinner.hide();
-        const usersArray = this.usersService.users;
+        
+        const usersArray = this.userService.users;
         for (let i = 0; i < usersArray.length; i++) {
           if (usersArray[i].birthdate > '1995-01-01') {
             usersArray[i].generation = "Generation Z";
@@ -95,12 +62,12 @@ public modalClose = "";
             babyBoom++;
           }
         }
-        this.usersService.millenial = millenial;
-        this.usersService.generationSilent = generationSilent;
-        this.usersService.generationX = generationX;
-        this.usersService.generationZ = generationZ;
-        this.usersService.babyBoom = babyBoom;
+        this.userService.millenial = millenial;
+        this.userService.generationSilent = generationSilent;
+        this.userService.generationX = generationX;
+        this.userService.generationZ = generationZ;
+        this.userService.babyBoom = babyBoom;
       });
     }
-  }
 
+}
