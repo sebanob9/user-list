@@ -14,7 +14,9 @@ export class UsersService {
 
   readonly URL_API = 'http://hello-world.innocv.com/api/user';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.selectedUser=new User();
+   }
 
   getUsers() {
     return this.http.get(this.URL_API)

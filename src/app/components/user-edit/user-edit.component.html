@@ -30,7 +30,7 @@
 
   <input type="hidden" name="id" #id="ngModel" [(ngModel)]="user.id">
   
-  <button type="submit" [disabled]="isReadOnly" class="btn btn--update" i18n>Update</button>
-  <button (click)="deleteUser(user.id)" [disabled]="isReadOnly"  class="btn btn--delete" i18n>Delete</button>
+<!--   <button type="submit" [disabled]="isReadOnly" class="btn btn--update" i18n>Update</button> -->
+  <button (click)="deleteUser(user.id)" [disabled]="isReadOnly" class="btn btn--delete" i18n>Delete</button>
 
 </form>

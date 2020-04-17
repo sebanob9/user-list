@@ -1,0 +1,38 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white" i18n>Loading...</p>
+  </ngx-spinner>
+  
+  <div class="users-container">
+    <div class="user-card" *ngFor="let user of userService.users">
+      <h2 class="user-card__name">{{user.name}}</h2>
+      <p class="user-card__birthdate">{{user.birthdate | date:'longDate' }}</p>
+      <p class="user-card__generation">{{user.generation}}</p>
+    </div>
+  </div> <!-- ---- PRINCIPAL ---- -->
+  <!-- data-toggle="modal" data-target="#editModal"
+      (click)="editUser1(user)" -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>{{userService.selectedUser.name}}</p>
+          <form (ngSubmit)="editUser(userForm)" #userForm="ngForm" class="edit-form">
+            <input type="hidden" name="id" #id="ngModel" [(ngModel)]="userService.selectedUser.id">
+  
+            <div class="edit-form__name">
+              <input type="text" id="user_name" required placeholder="your name here"
+                [(ngModel)]="userService.selectedUser.name" name="name" #name="ngModel" [readonly]="isReadOnly"
+                minlength="3" i18n>
+            </div>
+  
+                  <button type="submit" [disabled]="isReadOnly" class="btn btn--update" i18n>Update</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

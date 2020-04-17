@@ -37,6 +37,11 @@
         &:hover {
             cursor: pointer;
             background-color: $main-color-op;
+            color: $main-dark;
         }
     }
 }
+
+::ng-deep .cdk-overlay-container {
+    z-index: 1200 ;
+  }

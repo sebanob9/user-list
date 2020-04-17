@@ -29,7 +29,7 @@ export class UserEditComponent implements OnInit {
       });
     }
 
-  editUser(form: NgForm) {
+/*   editUser(form: NgForm) {
     console.log(form.value);
       this.userService.putUser(form.value)
         .subscribe(res => {
@@ -42,13 +42,10 @@ export class UserEditComponent implements OnInit {
           confirmButtonText: 'CONTINUE',
           confirmButtonColor: '#9f6984'
         })
-  }
+  } */
 
     
   deleteUser(id: string) {
-      this.userService.deleteUser(id)
-        .subscribe(res => {
-          this.showUsers();
           Swal.fire({
             title: 'Are you sure?',
             icon: 'warning',
@@ -58,20 +55,15 @@ export class UserEditComponent implements OnInit {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.value) {
-              Swal.fire(
-                'User deleted!'
-              )
-            }
-          })
-          /* Swal.fire({
-            allowOutsideClick: true,
-            text: 'The user has been deleted',
-            icon: 'success',
-            confirmButtonText: 'CONTINUE',
-            confirmButtonColor: '#9f6984'
-          }) */
-        });  
+              Swal.fire('User deleted!');
+              this.userService.deleteUser(id)
+                .subscribe(res => {
+                this.showUsers();
+                })
+        }  
+      });
 }
+
 
 minDate = new Date(1900, 1, 1); 
 maxDate = new Date(2014, 1, 1);

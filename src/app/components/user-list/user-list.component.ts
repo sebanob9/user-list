@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
 import { NgxSpinnerService } from "ngx-spinner";
 
+import Swal from 'sweetalert2';
+import { User } from 'src/app/models/user';
+import { NgForm } from '@angular/forms';
+
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -9,7 +14,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class UserListComponent implements OnInit {
 
-  constructor(public userService: UsersService, private spinner: NgxSpinnerService) {
+  constructor(public usersService: UsersService, private spinner: NgxSpinnerService) {
 
   }
 
@@ -17,15 +22,39 @@ export class UserListComponent implements OnInit {
     this.showUsers();
   }
 
- 
+public modalClose = "";
+
+ editUser1(user: User) {
+  this.usersService.selectedUser = user; // primero seleccionamos al invitado
+  console.log(user);
+}
+
+  editUser(form?: NgForm) {
+    console.log(form.value);
+      this.usersService.putUser(form.value)
+        .subscribe(res => {
+          this.showUsers();
+        })
+        Swal.fire({
+          allowOutsideClick: true,
+          text: 'The user has been uptated',
+          icon: 'success',
+          confirmButtonText: 'CONTINUE',
+          confirmButtonColor: '#9f6984'
+        })
+        this.modalClose = 'modal';
+  }
+
+  
+
   showUsers() {
     this.spinner.show();
-    this.userService.getUsers() 
+    this.usersService.getUsers() 
       .subscribe( res => {
-        this.userService.users = res;
+        this.usersService.users = res;
         console.log(res);
         this.spinner.hide();
-        const usersArray = this.userService.users;
+        const usersArray = this.usersService.users;
         for (let i = 0; i < usersArray.length; i++) {
           if (usersArray[i].birthdate > '1995-01-01') {
             usersArray[i].generation = "Generation Z";
@@ -66,11 +95,11 @@ export class UserListComponent implements OnInit {
             babyBoom++;
           }
         }
-        this.userService.millenial = millenial;
-        this.userService.generationSilent = generationSilent;
-        this.userService.generationX = generationX;
-        this.userService.generationZ = generationZ;
-        this.userService.babyBoom = babyBoom;
+        this.usersService.millenial = millenial;
+        this.usersService.generationSilent = generationSilent;
+        this.usersService.generationX = generationX;
+        this.usersService.generationZ = generationZ;
+        this.usersService.babyBoom = babyBoom;
       });
     }
   }

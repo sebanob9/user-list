@@ -28,7 +28,6 @@ export class UserCreateComponent implements OnInit {
   addUser(form: NgForm) {
     console.log(form.value);
     this.userService.postUser(form.value)
-    /* this.guestsService.selectedGuest = new Guest(); */
       .subscribe( res => {
         this.resetForm(form);
         });
