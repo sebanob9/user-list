@@ -1,0 +1,35 @@
+.user-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    &__name, &__date {
+      input {
+      width:85%;
+      margin:5px 0;
+      }
+    }
+  }
+  
+  .user-form__date-icon {
+    margin-left: 10px;
+  }
+
+//-----------------------//
+//------ DESKTOP -------//
+//---------------------//
+@media screen and (min-width: 767px) {
+    .user-form {
+        align-items: center;
+        &__name, &__date {
+          width: 50%;
+          input {
+            width:90%;
+            margin:5px 0;
+            }
+        }
+        .btn {
+          width:50%;
+        }
+      }
+}

@@ -11,6 +11,7 @@
         color: $main-dark;
         border: 2px solid $main-dark;
     }
+    &:focus {outline:0;}
 }
 
 button:disabled {

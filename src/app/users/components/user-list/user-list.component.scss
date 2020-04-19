@@ -27,6 +27,23 @@
     }
 }
 
+.add-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    &__name, &__date {
+      input {
+      width:80%;
+      margin:5px 0;
+      }
+    }
+  }
+  
+  .add-form__date-icon {
+    margin-left: 10px;
+  }
+  
 
 //-----------------------//
 //------ DESKTOP -------//
@@ -40,8 +57,21 @@
             color: $main-dark;
         }
     }
+
+    .generation-filter {
+        display: flex;
+        justify-content: space-around;
+        margin: 15px;
+    }
+}
+
+pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 ::ng-deep .cdk-overlay-container {
     z-index: 1200 ;
   }
+

@@ -6,18 +6,14 @@ import { UserCreateComponent } from './components/user-create/user-create.compon
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { CounterComponent } from './components/counter/counter.component';
 
-import { NgxSpinnerModule } from "ngx-spinner";
 import { MatDatepickerModule, MatNativeDateModule, MatInputModule} from '@angular/material';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
-
 
 
 @NgModule({
   declarations: [UserListComponent, UserCreateComponent, UserEditComponent, CounterComponent],
   imports: [
     SharedModule,
-    NgxSpinnerModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule

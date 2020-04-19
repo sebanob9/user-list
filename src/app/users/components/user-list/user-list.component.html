@@ -6,37 +6,51 @@
 </ngx-spinner>
 
 <div class="users-container">
-    <div class="user-card" *ngFor="let user of usersService.users" (click)="editUser1(user)" data-toggle="modal" data-target="#exampleModal">
+    <div class="user-card" *ngFor="let user of usersService.users | paginate: { itemsPerPage: 20, currentPage: page }" (click)="editModal(user)" data-toggle="modal" data-target="#exampleModal">
         <h2 class="user-card__name">{{user.name}}</h2>
         <p class="user-card__birthdate">{{user.birthdate | date:'longDate' }}</p>
         <p class="user-card__generation">{{user.generation}}</p>
     </div>
 </div>
+<pagination-controls (pageChange)="page = $event"></pagination-controls>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-                <form (ngSubmit)="editUser(userForm)" #userForm="ngForm" class="edit-form">
+<div class="generation-filter">
+    <p>Filter:</p>
+    <a (click)="all()">See all</a>
+    <a (click)="millenials()">Millenials</a>
+    <a (click)="babyBoom()">Baby Boom</a>
+    <a (click)="generationZ()">Generation Z</a>
+    <a (click)="generationX()">Generation X</a>
+    <a (click)="silentG()">Silent Generation</a>
+</div>
+
+
+ <!-- ---- MODAL ---- -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-body">
+            <form (ngSubmit)="editUser(userForm)" #userForm="ngForm" class="add-form">
+                <div class="add-form__name">
                     <input type="text" id="user_name" required placeholder="your name here"
                     [(ngModel)]="usersService.selectedUser.name" name="name" #name="ngModel" 
                     minlength="3" i18n>
-
+                </div>
+                
+                <div class="add-form__date">
                     <input matInput [matDatepicker]="picker" placeholder="Choose a date" i18n
                     [(ngModel)]="usersService.selectedUser.birthdate" #birthdate="ngModel" name="birthdate" readonly id="user_birthdate" required
                     [min]="minDate" [max]="maxDate" [readonly]="isReadOnly">
-                    <mat-datepicker-toggle matSuffix [for]="picker" class="edit-form__date-icon"></mat-datepicker-toggle>
+                    <mat-datepicker-toggle matSuffix [for]="picker" class="add-form__date-icon"></mat-datepicker-toggle>
                     <mat-datepicker #picker [disabled]="isReadOnly"></mat-datepicker>
-
-                    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="usersService.selectedUser.id">
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                </form>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+                </div>
+                
+                <input type="hidden" name="id" #id="ngModel" [(ngModel)]="usersService.selectedUser.id">
+                <button type="submit" class="btn btn--update">Save changes</button>
+                <button type="button" class="btn btn--delete" data-dismiss="modal">Close</button>
+            </form>
+            
         </div>
-      </div>
-
-
-
-
+        </div>
+    </div>
+</div>

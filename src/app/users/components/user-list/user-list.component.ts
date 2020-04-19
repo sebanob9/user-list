@@ -13,18 +13,18 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent implements OnInit {
+  
 
   constructor(public usersService: UsersService, private spinner: NgxSpinnerService) {
 
   }
 
-  ngOnInit() {
+ngOnInit() {
     this.showUsers();
   }
 
-public modalClose = "";
 
- editUser1(user: User) {
+editModal(user: User) {
   this.usersService.selectedUser = user; // primero seleccionamos al invitado
   console.log(user);
 }
@@ -41,20 +41,47 @@ public modalClose = "";
           icon: 'success',
           confirmButtonText: 'CONTINUE',
           confirmButtonColor: '#9f6984'
-        })
-        this.modalClose = 'modal';
+        });
   }
 
+  public allUsers;
   
+  all() {
+    this.usersService.users = this.allUsers;
+    console.log(this.allUsers);
+  }
+  millenials() {
+    this.usersService.users = this.allUsers;
+    this.usersService.users = this.usersService.users.filter(gift => gift.generation === 'Millenial');
+  }  
+  babyBoom() {
+    this.usersService.users = this.allUsers;
+    this.usersService.users = this.usersService.users.filter(gift => gift.generation === 'Baby Boom');
+  }  
+  generationZ() {
+    this.usersService.users = this.allUsers;
+    this.usersService.users = this.usersService.users.filter(gift => gift.generation === 'Generation Z');
+  }  
+  generationX() {
+    this.usersService.users = this.allUsers;
+    this.usersService.users = this.usersService.users.filter(gift => gift.generation === 'Generation X');
+  }  
+  silentG() {
+    this.usersService.users = this.allUsers;
+    this.usersService.users = this.usersService.users.filter(gift => gift.generation === 'Silent G');
+  }  
 
+ 
+  
   showUsers() {
     this.spinner.show();
     this.usersService.getUsers() 
       .subscribe( res => {
+        this.allUsers = res;
         this.usersService.users = res;
         console.log(res);
         this.spinner.hide();
-        const usersArray = this.usersService.users;
+        const usersArray = this.allUsers;
         for (let i = 0; i < usersArray.length; i++) {
           if (usersArray[i].birthdate > '1995-01-01') {
             usersArray[i].generation = "Generation Z";
@@ -102,5 +129,6 @@ public modalClose = "";
         this.usersService.babyBoom = babyBoom;
       });
     }
+
   }
 
