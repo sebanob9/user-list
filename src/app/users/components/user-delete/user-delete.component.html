@@ -1,0 +1,21 @@
+<div class="enable-menu">
+  <button [disabled]="!isReadOnly" (click)="isDisabled()" class="btn" i18n>Enable remove</button>
+  <button [disabled]="isReadOnly" (click)="isDisabled()" class="btn" i18n>Disable remove</button>
+</div>
+
+
+<form (ngSubmit)="editUser(userForm)" #userForm="ngForm" *ngFor="let user of userService.users"
+ [ngClass]="status ? 'enabled' : 'disabled'" class="edit-form">
+
+  <div class="edit-form__name">
+    <input type="text" id="user_name" required placeholder="your name here" 
+    [(ngModel)]="user.name" name="name" #name="ngModel" 
+    readonly minlength="3" i18n>
+  </div>
+
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="user.id">
+  
+<!--   <button type="submit" [disabled]="isReadOnly" class="btn btn--update" i18n>Update</button> -->
+  <button (click)="deleteUser(user.id)" [disabled]="isReadOnly" class="btn btn--delete" i18n>Delete</button>
+
+</form>

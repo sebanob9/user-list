@@ -4,11 +4,11 @@ import { NgxSpinnerService } from "ngx-spinner";
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-user-edit',
-  templateUrl: './user-edit.component.html',
-  styleUrls: ['./user-edit.component.scss']
+  selector: 'app-user-delete',
+  templateUrl: './user-delete.component.html',
+  styleUrls: ['./user-delete.component.scss']
 })
-export class UserEditComponent implements OnInit {
+export class UserDeleteComponent implements OnInit {
 
   constructor(public userService: UsersService, private spinner: NgxSpinnerService) {
   }

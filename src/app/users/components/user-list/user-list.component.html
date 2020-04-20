@@ -15,13 +15,13 @@
 <pagination-controls (pageChange)="page = $event"></pagination-controls>
 
 <div class="generation-filter">
-    <p>Filter:</p>
-    <a (click)="all()">See all</a>
-    <a (click)="millenials()">Millenials</a>
-    <a (click)="babyBoom()">Baby Boom</a>
-    <a (click)="generationZ()">Generation Z</a>
-    <a (click)="generationX()">Generation X</a>
-    <a (click)="silentG()">Silent Generation</a>
+    <p><span>Filter:</span></p>
+    <a class="generation-filter__link" (click)="all()">See all</a>
+    <a class="generation-filter__link" (click)="millenials()">Millenials</a>
+    <a class="generation-filter__link" (click)="babyBoom()">Baby Boom</a>
+    <a class="generation-filter__link" (click)="generationZ()">Generation Z</a>
+    <a class="generation-filter__link" (click)="generationX()">Generation X</a>
+    <a class="generation-filter__link" (click)="silentG()">Silent Generation</a>
 </div>
 
 

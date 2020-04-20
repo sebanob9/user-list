@@ -43,6 +43,19 @@
   .add-form__date-icon {
     margin-left: 10px;
   }
+
+  .generation-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+        font-weight: bold;
+        font-size: $font-m;
+    }
+    &__link {
+        margin: 10px;
+    }
+}
   
 
 //-----------------------//
@@ -60,6 +73,7 @@
 
     .generation-filter {
         display: flex;
+        flex-direction: inherit;
         justify-content: space-around;
         margin: 15px;
     }
